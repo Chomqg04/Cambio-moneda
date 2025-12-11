@@ -1,0 +1,111 @@
+/* --- RESET BÁSICO --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- ESTILO GENERAL --- */
+body {
+    font-family: "Inter", Arial, sans-serif;
+    background: linear-gradient(135deg, #ece9f1 0%, #d4d9ff 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* --- TÍTULO --- */
+h1 {
+    margin-bottom: 25px;
+    font-size: 2.2rem;
+    color: #333;
+    text-align: center;
+}
+
+/* --- CONTENEDOR --- */
+.USD {
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+/* --- LABEL --- */
+.USD label {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #444;
+}
+
+/* --- INPUT --- */
+.USD input {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.USD input:focus {
+    border-color: #5563ff;
+    outline: none;
+    box-shadow: 0 0 6px rgba(85, 99, 255, 0.4);
+}
+
+/* --- BOTÓN --- */
+#calcular {
+    padding: 12px;
+    background: #5563ff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+#calcular:hover {
+    background: #3c49d9;
+}
+
+/* --- RESULTADO --- */
+#resultado {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #222;
+    min-height: 24px;
+}
+
+/* --- ANIMACIÓN--- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .USD {
+        padding: 20px;
+    }
+}
